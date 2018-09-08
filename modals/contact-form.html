@@ -1,0 +1,18 @@
+<div id="modalForm">
+	<div><img class="close" src="images/close.svg" alt=""></div>
+	<img class="logo" src="./images/logo.svg" alt="">
+	<p>Please fill the form below to get in touch.</p>
+	<form id="contact" action="../util/mailer.php" method="post" enctype="application/x-www-form-urlencoded">
+		<label for="name">Name</label>
+		<input name="name" id="name" required placeholder="Insert your name">
+		<label for="email">Email</label>
+		<input name="email" id="email" type="email" required placeholder="Insert email">
+		<label for="subject">Subject</label>
+		<input name="subject" id="subject" required placeholder="Insert your subject">
+		<label for="message">Message</label>
+		<textarea name="message" id="message" required></textarea>
+		<button>
+			<p>Send</p>
+		</button>
+	</form>
+</div>
