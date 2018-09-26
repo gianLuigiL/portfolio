@@ -64,7 +64,7 @@ import { getHTMLData, getJSONData, handleInput, toggleFlex  } from "./utility/fu
 				let data;
 				try{
 					const formPromise = await getHTMLData('./modals/contact-form.html');
-					if(formPromise.ok && formPromise.status !== 200){
+					if(!formPromise.ok && formPromise.status !== 200){
 						throw 'Something went wrong'
 					}
 					data = await formPromise.text();
@@ -95,7 +95,7 @@ import { getHTMLData, getJSONData, handleInput, toggleFlex  } from "./utility/fu
 					try {
 						const response = await getJSONData('./util/mailer.php', 'POST', query);
 						data = await response.json();
-						if(response.ok && response.status !== 200){
+						if(!response.ok && response.status !== 200){
 							throw 'Something went wrong';
 						}
 					} catch (e){
